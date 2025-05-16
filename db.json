@@ -1,0 +1,34 @@
+{
+  "users": [
+    {
+      "id": "b6baabc4-3a74-49fc-93be-55eecb78b941",
+      "fname": "antonio",
+      "lname": "Kalandula",
+      "username": "antonio.Kalandula@gmailcom"
+    },
+    {
+      "id": "01c71df8-4e7d-478a-b9d0-b347b04826d5",
+      "fname": "Carla",
+      "lname": "Matadi",
+      "username": "Carla.Matadi@gmailcom"
+    },
+    {
+      "fname": "Carlos",
+      "lname": "Ambriz",
+      "username": "Carlos.Ambriz@gmailcom",
+      "id": "ff90557f-ddca-400b-8353-daf878c583a0"
+    },
+    {
+      "id": "eefb011d-a17a-4539-8752-e22468cafaeb",
+      "fname": "Maria",
+      "lname": "Conceição",
+      "username": "Maria.Conceição@gmailcom"
+    },
+    {
+      "id": "201b8c7c-77c5-4df6-b129-b9780f3f70ad",
+      "fname": "Carlos",
+      "lname": "Pendebele",
+      "username": "Carlos.Pendebele@gmailcom"
+    }
+  ]
+}
