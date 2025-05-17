@@ -27,8 +27,7 @@ const Users = () => {
         } 
       }catch( error ) {error}
     }
-    fetchDelete()   
-    navigate('/users') 
+    fetchDelete()       
   }
 
   const handleEdit = (userId) => {
