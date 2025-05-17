@@ -1,18 +1,29 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
 const Edit = () => {
   const { id } = useParams()
-  const [fname, setFname] = useState()
-  const [lname, setLname] = useState()
+  const [fname, setFname] = useState("")
+  const [lname, setLname] = useState("")
   const navigate = useNavigate()
 
   const getFname = (e) => { setFname(e.target.value) }
   const getLname = (e) => { setLname(e.target.value) }
 
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/${id}`) 
+        const data = await response.json()
+        setFname(data.fname)
+        setLname(data.lname)        
+      } catch (error) { error }
+    }
+    fetchData()
+  }, [])
 
   const upDateUser = async (id, newData) => {
-    const response = await fetch(`http://localhost:3000/users/${id}`, {
+    const response = await fetch(`${import.meta.env.VITE_API_URL}/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -44,7 +55,7 @@ const Edit = () => {
             id="fname"
             name="fname"
             className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
-            placeholder="Typing First Name"
+            value={fname}
             required
             onChange={getFname}
           />
@@ -58,7 +69,7 @@ const Edit = () => {
             id="lname"
             name="lname"
             className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
-            placeholder="Typing Last Name"
+            value={lname}
             required
             onChange={getLname}
           />

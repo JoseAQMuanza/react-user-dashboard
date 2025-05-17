@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from "uuid"
 const AddUser = () => {
   const [fname, setFname] = useState('')
   const [lname, setLname] = useState('')  
-  const url = 'http://localhost:3000/users'
+  const url = `${import.meta.env.VITE_API_URL}`
 
   const getFname = (e) => { setFname(e.target.value) }
   const getLname = (e) => { setLname(e.target.value) }

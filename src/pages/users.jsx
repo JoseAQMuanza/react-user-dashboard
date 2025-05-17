@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 const Users = () => {
   const navigate = useNavigate()
   const [usersList, setUsersList] = useState([])  
-  const url = 'http://localhost:3000/users'
+  const url = `${import.meta.env.VITE_API_URL}`
 
   useEffect(() => {
     async function fetchData() {
