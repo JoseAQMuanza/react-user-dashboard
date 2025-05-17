@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid"
+import { useNavigate } from "react-router-dom";
 
 const AddUser = () => {
   const [fname, setFname] = useState('')
-  const [lname, setLname] = useState('')  
+  const [lname, setLname] = useState('')
+  const Navigate = useNavigate()  
   const url = `${import.meta.env.VITE_API_URL}`
 
   const getFname = (e) => { setFname(e.target.value) }
@@ -29,6 +31,7 @@ const AddUser = () => {
       })      
     }    
     fetchPost()
+    Navigate('/')
   }
 
 
