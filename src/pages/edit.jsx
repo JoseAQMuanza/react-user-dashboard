@@ -31,8 +31,7 @@ const Edit = () => {
       body: JSON.stringify(newData),
     });
 
-    const data = await response.json();    
-    console.log("Dados atualizados:", data);
+    const data = await response.json();        
   };
 
   const handleSubmit = async (e) => {
