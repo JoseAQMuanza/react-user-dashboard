@@ -23,7 +23,7 @@ const Users = () => {
       try {
         const response = await fetch(`${url}/${userId}`, { method: "DELETE" })
         if (response.ok) {
-          setUsersList(prevUsersList => prevUsersList.filter((user) => user !== id))          
+          setUsersList(prevUsersList => prevUsersList.filter((user) => user !== userId))          
         } 
       }catch( error ) {error}
     }

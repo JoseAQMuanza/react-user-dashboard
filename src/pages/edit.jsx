@@ -31,14 +31,14 @@ const Edit = () => {
       body: JSON.stringify(newData),
     });
 
-    const data = await response.json();
+    const data = await response.json();    
     console.log("Dados atualizados:", data);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
     const username = `${fname}.${lname}@gmailcom`    
-    upDateUser(id, { fname, lname, username })
+    await upDateUser(id, { fname, lname, username })
     navigate('/users')
   }
 
