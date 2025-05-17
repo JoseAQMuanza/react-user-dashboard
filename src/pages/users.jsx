@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { use, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const Users = () => {
@@ -16,7 +16,7 @@ const Users = () => {
     }
 
     fetchData()
-  }, [])
+  }, [usersList])
 
   const handleDeleteUser = (userId) => {
     async function fetchDelete() {
