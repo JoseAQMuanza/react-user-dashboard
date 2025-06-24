@@ -1,7 +1,7 @@
 # React User Dashboard
 
 ## 🚀 Live demo
-[👁️ View the project live](https://react-user-dashboard-jxfxf9r74-jose-muanzas-projects.vercel.app/)
+[👁️ View the project live](https://react-user-dashboard-jose-muanzas-projects.vercel.app/)
 
 
 This is a user management application built with **ReactJS**, **React Router**, and **TailwindCSS**. It includes features like:
