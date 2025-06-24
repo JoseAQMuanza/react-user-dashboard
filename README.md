@@ -1,6 +1,6 @@
 # React User Dashboard
 
-## 🚀 Demo ao vivo  
+## 🚀 Live demo
 [👁️ View the project live](https://react-user-dashboard-jxfxf9r74-jose-muanzas-projects.vercel.app/)
 
 
